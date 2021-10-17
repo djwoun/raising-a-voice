@@ -44,7 +44,7 @@ function loginCheck() {
 
   bcrypt.compare(user.id, hash, function (err, result) {
     if (result == false) {
-      //return false;
+      return false;
     }
   });
 
@@ -57,7 +57,7 @@ function loginCheck() {
 
   bcrypt.compare(user.password, hash, function (err, result) {});
   if (result == false) {
-    //  return false;
+      return false;
   }
 
   if (role == "admin") {
